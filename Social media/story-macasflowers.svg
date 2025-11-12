@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo gradiente -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8e8f8"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1080" height="1920" fill="url(#bg)"/>
+
+  <!-- Foto placeholder (rectángulo donde pegarás tu foto) -->
+  <rect x="60" y="100" width="960" height="1080" fill="#e0e0e0" rx="20"/>
+  <text x="540" y="640" font-family="Poppins, sans-serif" font-size="40" fill="#9e9e9e" text-anchor="middle">Pega tu foto aquí</text>
+
+  <!-- Título -->
+  <text x="540" y="1300" font-family="Poppins, sans-serif" font-size="48" font-weight="bold" fill="#3e6b3e" text-anchor="middle">
+    ¿Cansado de olvidar regalos?
+  </text>
+
+  <!-- Beneficios -->
+  <text x="540" y="1400" font-family="Poppins, sans-serif" font-size="36" fill="#333333" text-anchor="middle">
+    🌸 Suscríbete y recibe
+  </text>
+  <text x="540" y="1450" font-family="Poppins, sans-serif" font-size="36" fill="#333333" text-anchor="middle">
+    ramos frescos cada 15 días
+  </text>
+
+  <!-- Beneficios lista -->
+  <text x="540" y="1520" font-family="Poppins, sans-serif" font-size="32" fill="#25d366" text-anchor="middle">
+    ✅ Envío gratis Bogotá
+  </text>
+  <text x="540" y="1570" font-family="Poppins, sans-serif" font-size="32" fill="#25d366" text-anchor="middle">
+    ✅ Cancela cuando quieras
+  </text>
+  <text x="540" y="1620" font-family="Poppins, sans-serif" font-size="32" fill="#25d366" text-anchor="middle">
+    ✅ 10% dto. hoy
+  </text>
+
+  <!-- CTA Botón -->
+  <rect x="240" y="1700" width="600" height="120" rx="60" fill="#25d366"/>
+  <text x="540" y="1765" font-family="Poppins, sans-serif" font-size="40" font-weight="600" fill="white" text-anchor="middle">
+    💬 Iniciar suscripción
+  </text>
+</svg>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1920" viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <!-- Frame 1: Segundos 0-3.75 -->
+  <g id="frame1">
+    <rect width="1080" height="1920" fill="#f8e8f8"/>
+    <text x="540" y="500" font-family="Poppins, sans-serif" font-size="56" font-weight="bold" fill="#3e6b3e" text-anchor="middle">
+      ¿Se te olvida regalar? 😅
+    </text>
+    <text x="540" y="600" font-family="Poppins, sans-serif" font-size="40" fill="#333333" text-anchor="middle">
+      Frame 1: Segundos 0-3.75
+    </text>
+  </g>
+
+  <!-- Frame 2: Segundos 3.75-7.5 -->
+  <g id="frame2" transform="translate(0, -1920)">
+    <rect width="1080" height="1920" fill="#ffffff"/>
+    <text x="540" y="500" font-family="Poppins, sans-serif" font-size="48" font-weight="bold" fill="#3e6b3e" text-anchor="middle">
+      Suscríbete y olvídate de acordarte
+    </text>
+    <text x="540" y="600" font-family="Poppins, sans-serif" font-size="40" fill="#333333" text-anchor="middle">
+      Frame 2: Segundos 3.75-7.5
+    </text>
+  </g>
+
+  <!-- Frame 3: Segundos 7.5-11.25 -->
+  <g id="frame3" transform="translate(0, -3840)">
+    <rect width="1080" height="1920" fill="#e0e0e0"/>
+    <text x="540" y="500" font-family="Poppins, sans-serif" font-size="48" font-weight="bold" fill="#3e6b3e" text-anchor="middle">
+      Recibe flores frescas
+    </text>
+    <text x="540" y="600" font-family="Poppins, sans-serif" font-size="40" fill="#333333" text-anchor="middle">
+      cada 15 días
+    </text>
+  </g>
+
+  <!-- Frame 4: Segundos 11.25-15 -->
+  <g id="frame4" transform="translate(0, -5760)">
+    <rect width="1080" height="1920" fill="#25d366"/>
+    <text x="540" y="500" font-family="Poppins, sans-serif" font-size="56" font-weight="bold" fill="white" text-anchor="middle">
+      💬 Escríbenos por WhatsApp
+    </text>
+    <text x="540" y="600" font-family="Poppins, sans-serif" font-size="40" fill="white" text-anchor="middle">
+      → Link en bio
+    </text>
+  </g>
+</svg>

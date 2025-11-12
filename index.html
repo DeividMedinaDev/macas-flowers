@@ -78,7 +78,7 @@
   
   <header>
     <div class="container">
-      <img src="img/logo.jpg" alt="Maca's Flowers Logo" width="64" height="64" loading="eager" fetchpriority="high">
+      <img src="img/logo.jpg" alt="Maca's Flowers Logo" width="64" height="64">
       <h1>Maca's Flowers</h1>
       <p>Flores con estilo + suscripción sin complicaciones</p>
       <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20mi%20suscripción%20🌸" target="_blank" rel="noopener">
@@ -88,37 +88,88 @@
   </header>
 
   <main id="main">
-    <section id="how" aria-labelledby="how-h">
+    <!-- PLANES -->
+    <section id="planes" aria-labelledby="planes-h">
       <div class="container">
-        <h2>¿Cómo funciona?</h2>
-        <ol>
-          <li><strong>Escoge tu plan:</strong> Suscripción mensual o ramo único.</li>
-          <li><strong>Recibe flores frescas:</strong> Cada 15 días en tu puerta.</li>
-          <li><strong>Control total:</strong> Pausa, cambia o cancela cuando quieras.</li>
-        </ol>
-      </div>
-    </section>
+        <h2 id="planes-h">Elige tu plan</h2>
+        <p>Jarrones incluidos. Especialista que cambia las flores según su ciclo natural.</p>
 
-    <section id="gallery" aria-labelledby="gal-h">
-      <div class="container">
-        <h2>Portafolio</h2>
-        <div class="grid">
-          <article>
-            <img src="img/ramo1.jpeg" alt="Ramo de rosas naranja" loading="lazy" width="800" height="600">
-            <h3>Ramos de Temporada</h3>
+        <div class="plans-grid">
+
+          <!-- PLAN STANDARD -->
+          <article class="plan-card standard">
+            <img src="img/ramo1.jpeg" alt="Plan Standard" loading="lazy">
+            <h3>Standard</h3>
+            <p class="price">$70.000/mes</p>
+            <ul>
+              <li>✅ 1 ramo cada <strong>15-20 días</strong></li>
+              <li>✅ Jarrón de vidrio incluido</li>
+              <li>✅ Especialista cambia flores</li>
+              <li>✅ Flores de estación</li>
+              <li>✅ Cancela cuando quieras</li>
+            </ul>
+            <small>Ciclo: Rosas 15 días | Lirios 20 días</small>
+            <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20el%20plan%20Standard%20🌸" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Elegir Standard
+            </a>
           </article>
-          <article>
-            <img src="img/ramo2.jpeg" alt="Ramo pastel" loading="lazy" width="800" height="600">
-            <h3>Arreglos Personalizados</h3>
+
+          <!-- PLAN PREMIUM -->
+          <article class="plan-card premium">
+            <img src="img/ramo2.jpeg" alt="Plan Premium" loading="lazy">
+            <h3>Premium</h3>
+            <p class="price">$120.000/mes</p>
+            <ul>
+              <li>✅ 1 ramo cada <strong>12-18 días</strong></li>
+              <li>✅ Jarrón premium + base de madera</li>
+              <li>✅ Especialista + conservante incluido</li>
+              <li>✅ Flores importadas o de estación</li>
+              <li>✅ Tarjeta personalizada</li>
+              <li>✅ Prioridad en fechas especiales</li>
+            </ul>
+            <small>Ciclo: Tulipanes 12 días | Orquídeas 18 días</small>
+            <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20el%20plan%20Premium%20🌸" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Elegir Premium
+            </a>
           </article>
-          <article>
-            <img src="img/ramo3.jpg" alt="Ramo moderno" loading="lazy" width="800" height="600">
-            <h3>Para Él</h3>
+
+          <!-- PLAN EMPRESARIAL -->
+          <article class="plan-card enterprise">
+            <img src="img/ramo3.jpg" alt="Plan Empresarial" loading="lazy">
+            <h3>Empresarial</h3>
+            <p class="price">Desde $250.000/mes</p>
+            <ul>
+              <li>✅ 2-4 arreglos cada <strong>10-15 días</strong></li>
+              <li>✅ Jarrones corporativos incluidos</li>
+              <li>✅ Especialista 2 veces por mes</li>
+              <li>✅ Flores de larga duración</li>
+              <li>✅ Logo de empresa en tarjeta</li>
+              <li>✅ Factura electrónica</li>
+            </ul>
+            <small>Ciclo: Gypsophila 10 días | Anthurium 15 días</small>
+            <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20el%20plan%20Empresarial%20🌸" target="_blank" rel="noopener">
+              <i class="fab fa-whatsapp"></i> Cotizar Empresarial
+            </a>
           </article>
+
+        </div>
+
+        <div class="cycle-info">
+          <h4>¿Cada cuánto cambiamos las flores?</h4>
+          <p>No por calendario, <strong>por ciclo natural</strong>:</p>
+          <ul>
+            <li><strong>Rosas:</strong> 15 días</li>
+            <li><strong>Lirios:</strong> 20 días</li>
+            <li><strong>Tulipanes:</strong> 12 días</li>
+            <li><strong>Orquídeas:</strong> 18 días</li>
+            <li><strong>Gypsophila:</strong> 10 días</li>
+          </ul>
+          <p>El especialista evalúa y cambia solo cuando la flor lo necesita.</p>
         </div>
       </div>
     </section>
 
+    <!-- TESTIMONIOS -->
     <section id="testi" aria-labelledby="test-h">
       <div class="container">
         <h2>Lo que dicen nuestros clientes</h2>
@@ -129,6 +180,7 @@
       </div>
     </section>
 
+    <!-- CTA FINAL -->
     <section id="cta" aria-labelledby="cta-h">
       <div class="container">
         <h2>¿Listo para empezar?</h2>
