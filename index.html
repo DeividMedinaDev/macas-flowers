@@ -7,6 +7,8 @@
   <meta name="description" content="Ramos de estación cada 15 días. Envío gratis en Bogotá. Personalizados con amor.">
   <meta name="keywords" content="suscripción de flores, ramos a domicilio, arreglos personalizados, flores Bogotá">
   <meta name="author" content="Maca's Flowers">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="format-detection" content="telephone=yes">
   <link rel="canonical" href="https://macasflowers.github.io/macas-flowers/">
   
   <!-- Open Graph (Facebook, Instagram) -->
@@ -23,12 +25,13 @@
   <meta name="twitter:description" content="Ramos de estación cada 15 días, envío gratis en Bogotá.">
   <meta name="twitter:image" content="https://macasflowers.github.io/macas-flowers/img/logo.jpg">
 
-  <!-- JSON-LD (Rich Snippets) -->
+  <!-- JSON-LD (Rich Snippets Mejorado) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Florist",
     "name": "Maca's Flowers",
+    "description": "Suscripción de ramos frescos en Bogotá",
     "image": "https://macasflowers.github.io/macas-flowers/img/logo.jpg",
     "logo": "https://macasflowers.github.io/macas-flowers/img/logo.jpg",
     "telephone": "+57-312-334-1080",
@@ -39,17 +42,70 @@
       "addressRegion": "Cundinamarca",
       "addressCountry": "CO"
     },
-    "priceRange": "COP 45000 - 90000",
+    "priceRange": "COP 70000 - 250000",
     "openingHours": "Mo-Su 08:00-20:00",
-    "offers": {
-      "@type": "Offer",
-      "name": "Suscripción 2 ramos/mes",
-      "price": "90000",
-      "priceCurrency": "COP",
-      "availability": "https://schema.org/InStock"
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Planes de Suscripción",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Plan Standard",
+            "description": "1 ramo cada 15 días con jarrón incluido"
+          },
+          "price": "70000",
+          "priceCurrency": "COP",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Plan Premium",
+            "description": "1 ramo cada 10 días con jarrón premium"
+          },
+          "price": "120000",
+          "priceCurrency": "COP",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Plan Empresarial",
+            "description": "2-4 arreglos cada 10 días para empresas"
+          },
+          "price": "250000",
+          "priceCurrency": "COP",
+          "availability": "https://schema.org/InStock"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Plan Botánico",
+            "description": "Cambios por ciclo natural de la flor"
+          },
+          "price": "180000",
+          "priceCurrency": "COP",
+          "availability": "https://schema.org/InStock"
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "1"
     }
   }
   </script>
+
+  <!-- Preconnect y DNS Prefetch -->
+  <link rel="preconnect" href="https://wa.me">
+  <link rel="dns-prefetch" href="https://wa.me">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 
   <!-- Preload critical resources -->
   <link rel="preload" href="css/style.css" as="style">
@@ -58,7 +114,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
   
-  <!-- Font Awesome -->
+  <!-- Font Awesome (mantenido según solicitud) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <!-- PWA -->
@@ -78,11 +134,11 @@
   
   <header>
     <div class="container">
-      <img src="img/logo.jpg" alt="Maca's Flowers Logo" width="64" height="64">
+      <img src="img/logo.jpg" alt="Logotipo de Maca's Flowers" width="64" height="64" fetchpriority="high" decoding="sync">
       <h1>Maca's Flowers</h1>
       <p>Flores con estilo + suscripción sin complicaciones</p>
-      <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20mi%20suscripción%20🌸" target="_blank" rel="noopener">
-        <i class="fab fa-whatsapp"></i> Iniciar suscripción
+      <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20mi%20suscripci%C3%B3n%20%F0%9F%8C%B8" target="_blank" rel="noopener" aria-label="Iniciar suscripción por WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i> Iniciar suscripción
       </a>
     </div>
   </header>
@@ -97,78 +153,78 @@
         <div class="plans-grid">
 
           <!-- PLAN STANDARD -->
-          <article class="plan-card standard">
-            <img src="img/ramo1.jpeg" alt="Plan Standard" loading="lazy">
-            <h3>Standard</h3>
+          <div class="plan-card standard" role="region" aria-labelledby="plan-standard-title" style="--index: 0">
+            <img src="img/ramo1.jpeg" alt="Ramo de flores frescas del Plan Standard" loading="lazy" decoding="async">
+            <h3 id="plan-standard-title">Standard</h3>
             <p class="price">$70.000/mes</p>
             <ul>
-              <li>✅ 1 ramo cada <strong>15 días</strong></li>
-              <li>✅ Jarrón de vidrio incluido</li>
-              <li>✅ Especialista cambia flores</li>
-              <li>✅ Flores de estación</li>
-              <li>✅ Cancela cuando quieras</li>
+              <li><span aria-hidden="true">✅</span> 1 ramo cada <strong>15 días</strong></li>
+              <li><span aria-hidden="true">✅</span> Jarrón de vidrio incluido</li>
+              <li><span aria-hidden="true">✅</span> Especialista cambia flores</li>
+              <li><span aria-hidden="true">✅</span> Flores de estación</li>
+              <li><span aria-hidden="true">✅</span> Cancela cuando quieras</li>
             </ul>
             <small>Rosas, gerberas, alstroemeria</small>
-            <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20el%20plan%20Standard%20🌸" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> Elegir Standard
+            <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20el%20plan%20Standard%20%F0%9F%8C%B8" target="_blank" rel="noopener" aria-label="Elegir Plan Standard por WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Elegir Standard
             </a>
-          </article>
+          </div>
 
           <!-- PLAN PREMIUM -->
-          <article class="plan-card premium">
-            <img src="img/ramo2.jpeg" alt="Plan Premium" loading="lazy">
-            <h3>Premium</h3>
+          <div class="plan-card premium" role="region" aria-labelledby="plan-premium-title" style="--index: 1">
+            <img src="img/ramo2.jpeg" alt="Ramo premium con flores exóticas del Plan Premium" loading="lazy" decoding="async">
+            <h3 id="plan-premium-title">Premium</h3>
             <p class="price">$120.000/mes</p>
             <ul>
-              <li>✅ 1 ramo cada <strong>10 días</strong></li>
-              <li>✅ Jarrón premium (vidrio o cerámica)</li>
-              <li>✅ Especialista + conservante</li>
-              <li>✅ Flores premium o de estación</li>
-              <li>✅ Prioridad en fechas especiales</li>
+              <li><span aria-hidden="true">✅</span> 1 ramo cada <strong>10 días</strong></li>
+              <li><span aria-hidden="true">✅</span> Jarrón premium (vidrio o cerámica)</li>
+              <li><span aria-hidden="true">✅</span> Especialista + conservante</li>
+              <li><span aria-hidden="true">✅</span> Flores premium o de estación</li>
+              <li><span aria-hidden="true">✅</span> Prioridad en fechas especiales</li>
             </ul>
             <small>Tulipanes, orquídeas, peonías</small>
-            <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20el%20plan%20Premium%20🌸" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> Elegir Premium
+            <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20el%20plan%20Premium%20%F0%9F%8C%B8" target="_blank" rel="noopener" aria-label="Elegir Plan Premium por WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Elegir Premium
             </a>
-          </article>
+          </div>
 
           <!-- PLAN EMPRESARIAL -->
-          <article class="plan-card enterprise">
-            <img src="img/ramo3.jpg" alt="Plan Empresarial" loading="lazy">
-            <h3>Empresarial</h3>
+          <div class="plan-card enterprise" role="region" aria-labelledby="plan-enterprise-title" style="--index: 2">
+            <img src="img/ramo3.jpg" alt="Arreglo floral corporativo del Plan Empresarial" loading="lazy" decoding="async">
+            <h3 id="plan-enterprise-title">Empresarial</h3>
             <p class="price">Desde $250.000/mes</p>
             <ul>
-              <li>✅ 2-4 arreglos cada <strong>10 días</strong></li>
-              <li>✅ Jarrones corporativos (personalizables)</li>
-              <li>✅ Especialista 2 veces por mes</li>
-              <li>✅ Flores de larga duración</li>
-              <li>✅ Logo de empresa en jarrón</li>
-              <li>✅ Factura electrónica</li>
+              <li><span aria-hidden="true">✅</span> 2-4 arreglos cada <strong>10 días</strong></li>
+              <li><span aria-hidden="true">✅</span> Jarrones corporativos (personalizables)</li>
+              <li><span aria-hidden="true">✅</span> Especialista 2 veces por mes</li>
+              <li><span aria-hidden="true">✅</span> Flores de larga duración</li>
+              <li><span aria-hidden="true">✅</span> Logo de empresa en jarrón</li>
+              <li><span aria-hidden="true">✅</span> Factura electrónica</li>
             </ul>
             <small>Gypsophila, anthurium, drácena</small>
-            <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20el%20plan%20Empresarial%20🌸" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> Cotizar Empresarial
+            <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20el%20plan%20Empresarial%20%F0%9F%8C%B8" target="_blank" rel="noopener" aria-label="Cotizar Plan Empresarial por WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Cotizar Empresarial
             </a>
-          </article>
+          </div>
 
           <!-- PLAN BOTÁNICO (TOP) -->
-          <article class="plan-card botanico">
-            <img src="img/logo.jpg" alt="Plan Botánico" loading="lazy">
-            <h3>Botánico</h3>
+          <div class="plan-card botanico" role="region" aria-labelledby="plan-botanico-title" style="--index: 3">
+            <img src="img/logo.jpg" alt="Flores de ciclo largo del Plan Botánico" loading="lazy" decoding="async">
+            <h3 id="plan-botanico-title"><span aria-hidden="true">🌿</span> Botánico</h3>
             <p class="price">Desde $180.000/mes</p>
             <ul>
-              <li>✅ Cambios <strong>por ciclo natural</strong></li>
-              <li>✅ Jarrón premium + base de madera</li>
-              <li>✅ Especialista botánico certificado</li>
-              <li>✅ Flores de ciclo largo: lirios, tulipanes, orquídeas</li>
-              <li>✅ Monitoreo de salud de la flor</li>
-              <li>✅ Cambio solo cuando la flor lo necesite</li>
+              <li><span aria-hidden="true">✅</span> Cambios <strong>por ciclo natural</strong></li>
+              <li><span aria-hidden="true">✅</span> Jarrón premium + base de madera</li>
+              <li><span aria-hidden="true">✅</span> Especialista botánico certificado</li>
+              <li><span aria-hidden="true">✅</span> Flores de ciclo largo: lirios, tulipanes, orquídeas</li>
+              <li><span aria-hidden="true">✅</span> Monitoreo de salud de la flor</li>
+              <li><span aria-hidden="true">✅</span> Cambio solo cuando la flor lo necesite</li>
             </ul>
             <small>Lirios: 20 días | Tulipanes: 12 días | Orquídeas: 18 días</small>
-            <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20el%20plan%20Botánico%20🌸" target="_blank" rel="noopener">
-              <i class="fab fa-whatsapp"></i> Elegir Botánico
+            <a class="btn-wa" href="https://wa.me/573123341080?text=Quiero%20el%20plan%20Bot%C3%A1nico%20%F0%9F%8C%B8" target="_blank" rel="noopener" aria-label="Elegir Plan Botánico por WhatsApp">
+              <i class="fab fa-whatsapp" aria-hidden="true"></i> Elegir Botánico
             </a>
-          </article>
+          </div>
 
         </div>
 
@@ -183,9 +239,9 @@
     <!-- TESTIMONIOS -->
     <section id="testi" aria-labelledby="test-h">
       <div class="container">
-        <h2>Lo que dicen nuestros clientes</h2>
+        <h2 id="test-h">Lo que dicen nuestros clientes</h2>
         <blockquote>
-          <p>“Llegan siempre frescas y el sticker es un detalle hermoso. ¡La suscripción me ha salvado en cumpleaños!”</p>
+          <p>"Llegan siempre frescas y el sticker es un detalle hermoso. ¡La suscripción me ha salvado en cumpleaños!"</p>
           <footer>— Paula V., suscriptora desde 2025</footer>
         </blockquote>
       </div>
@@ -194,12 +250,12 @@
     <!-- TESTIMONIO EMPRESARIAL -->
     <section id="testi-empresarial" aria-labelledby="testi-emp-h">
       <div class="container">
-        <h2 id="testi-empresarial-h">Ellos ya delegaron</h2>
+        <h2 id="testi-emp-h">Ellos ya delegaron</h2>
         <blockquote class="testi-emp">
           <p>
-            “Desde que contratamos el plan Empresarial, nuestros clientes se sienten cómodos y relajados al ver flores frescas en sala de espera. 
+            "Desde que contratamos el plan Empresarial, nuestros clientes se sienten cómodos y relajados al ver flores frescas en sala de espera. 
             Ya no nos preocupamos por la presentación: las flores dan elegancia solas. 
-            Delegamos el cambio y nuestra vida es mucho más fácil.”
+            Delegamos el cambio y nuestra vida es mucho más fácil."
           </p>
           <footer>— Ana Ramírez, Gerente de Experiencia, <strong>Consultores Ágil SAS</strong></footer>
         </blockquote>
@@ -209,10 +265,10 @@
     <!-- CTA FINAL -->
     <section id="cta" aria-labelledby="cta-h">
       <div class="container">
-        <h2>¿Listo para empezar?</h2>
+        <h2 id="cta-h">¿Listo para empezar?</h2>
         <p>Haz tu primer pedido hoy y recibe un <strong>10% de descuento</strong>.</p>
-        <a class="btn-wa" href="https://wa.me/573123341080?text=Hola,%20quiero%20mi%20primer%20ramo%20con%20descuento%20🌸" target="_blank" rel="noopener">
-          <i class="fab fa-whatsapp"></i> Iniciar suscripción
+        <a class="btn-wa" href="https://wa.me/573123341080?text=Hola,%20quiero%20mi%20primer%20ramo%20con%20descuento%20%F0%9F%8C%B8" target="_blank" rel="noopener" aria-label="Iniciar suscripción con descuento por WhatsApp">
+          <i class="fab fa-whatsapp" aria-hidden="true"></i> Iniciar suscripción
         </a>
       </div>
     </section>
@@ -220,30 +276,10 @@
 
   <footer>
     <div class="container">
-      <p>Envíos a Bogotá y Sabana. &copy; <span id="year"></span> Maca's Flowers. <a href="https://wa.me/573123341080">Contacto</a></p>
+      <p>Envíos a Bogotá y Sabana. &copy; <span id="year"></span> Maca's Flowers. <a href="https://wa.me/573123341080" aria-label="Contactar por WhatsApp">Contacto</a></p>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
-  <!-- ANIMACIÓN AL SCROLL -->
-<script>
-  // Revela elementos al hacer scroll (sin librerías)
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
-    });
-  }, { threshold: 0.1 });
-
-  // Aplica a elementos clave
-  document.querySelectorAll('.plan-card, .testi-emp, blockquote, #planes h2').forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    observer.observe(el);
-  });
-</script>
 </body>
 </html>

@@ -1,280 +1,34 @@
-/* Variables de color */
+/* ================= VARIABLES ================= */
 :root {
   --rosa: #f8e8f8;
   --verde: #3e6b3e;
   --txt: #333;
+  --txt-light: #555;
+  --whatsapp: #25d366;
 }
 
-/* Reset y base */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-body { font-family: system-ui, -apple-system, sans-serif; color: var(--txt); background: var(--rosa); line-height: 1.6; }
-
-/* Layout */
-header, section, footer { padding: 2rem 1rem; max-width: 900px; margin: auto; }
-
-/* Header */
-header { text-align: center; background: #fff; border-radius: 0 0 20px 20px; padding: 3rem 1rem; }
-header img { margin-bottom: 1rem; border-radius: 50%; }
-h1 { color: var(--verde); font-size: 2.5rem; }
-header p { font-size: 1.2rem; margin: 0.5rem 0 1.5rem; }
-
-/* Botón WhatsApp */
-.btn-wa {
-  display: inline-flex; align-items: center; gap: 0.5rem;
-  background: #25d366; color: #fff; padding: 1rem 2rem;
-  border-radius: 50px; text-decoration: none; font-weight: 600;
-  font-size: 1.1rem; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-  transition: transform 0.2s;
-}
-.btn-wa:hover { transform: translateY(-2px); }
-
-/* Secciones */
-h2 { margin: 2rem 0 1rem; color: var(--verde); }
-ol { margin-left: 1.5rem; }
-ol li { margin: 0.5rem 0; }
-
-/* Galería */
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 1rem 0 3rem; }
-article { background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-article h3 { padding: 1rem; margin: 0; }
-picture img { width: 100%; height: 250px; object-fit: cover; }
-
-/* Testimonios */
-blockquote { background: #fff; padding: 1.5rem; border-left: 5px solid var(--verde); border-radius: 8px; font-style: italic; }
-blockquote footer { margin-top: 1rem; font-weight: 600; font-style: normal; }
-
-/* CTA */
-#cta { text-align: center; background: #fff; border-radius: 12px; padding: 2rem; margin: 2rem 0; }
-
-/* Footer */
-footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #666; }
-
-/* Accesibilidad */
-.skip-link { position: absolute; top: -40px; left: 0; background: var(--verde); color: #fff; padding: 8px; text-decoration: none; z-index: 100; }
-.skip-link:focus { top: 0; }
-
-/* Responsive */
-@media (max-width: 600px) {
-  h1 { font-size: 2rem; }
-  header p { font-size: 1rem; }
-  .btn-wa { padding: 0.8rem 1.5rem; font-size: 1rem; }
-}
-/* ================= RESPONSIVE FIXES ================= */
-
-/* Contenedor centrado para pantallas grandes */
-body {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1rem;
+/* ================= RESET Y BASE ================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-/* Header ocupa todo el ancho pero contenido centrado */
-header {
-  margin: 0 -1rem 2rem -1rem; /* Compensa el padding de body */
-  padding: 3rem 1rem;
-  border-radius: 0;
-}
-
-/* Botón no crece en desktop */
-.btn-wa {
-  max-width: 300px;
-  margin: 1rem auto;
-  display: flex;
-  justify-content: center;
-}
-
-/* Galería: máximo 3 columnas, centrada */
-@media (min-width: 768px) {
-  .grid {
-    max-width: 900px;
-    margin: 2rem auto;
-  }
-}
-
-/* Tipografía escalable */
 html {
   font-size: 16px;
 }
-@media (min-width: 768px) {
-  html {
-    font-size: 18px;
-  }
-}
 
-/* Imágenes nunca se desbordan */
-picture img, img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* Texto en desktop no queda pegado a los bordes */
-section {
-  margin: 2rem 0;
-}
-@media (min-width: 768px) {
-  section {
-    padding: 2rem 0;
-  }
-}
-
-/* ===== SECCIÓN PLANES ===== */
-#planes {
-  background: #fff;
-  padding: 4rem 0;
-}
-
-.plans-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin: 3rem 0;
-}
-
-.plan-card {
-  background: #f8e8f8;
-  border-radius: 16px;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  transition: transform 0.3s;
-  position: relative;
-}
-
-.plan-card:hover {
-  transform: translateY(-8px);
-}
-
-.plan-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 1rem;
-}
-
-.plan-card h3 {
-  color: var(--verde);
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.plan-card .price {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 1.5rem;
-}
-
-.plan-card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem 0;
-  text-align: left;
-}
-
-.plan-card li {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  color: #555;
-}
-
-.plan-card small {
-  display: block;
-  margin: 1rem 0;
-  color: #666;
-  font-size: 0.9rem;
-}
-
-.plan-card .btn-wa {
-  margin-top: 1rem;
-  width: 100%;
-  max-width: 280px;
-}
-
-/* ===== PLAN BOTÁNICO (sin ::before) ===== */
-.plan-card.botanico {
-  background: linear-gradient(135deg, #f8e8f8 0%, #e8f5e9 100%);
-  border: 2px solid #3e6b3e;
-  position: relative;
-  overflow: hidden;
-}
-
-/* Borde animado sutil */
-.plan-card.botanico::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 3px;
-  background: #25d366;
-  animation: borderBotanico 3s linear infinite;
-}
-
-@keyframes borderBotanico {
-  0% { left: -100%; }
-  100% { left: 100%; }
-}
-
-/* Título con ícono pequeño */
-.plan-card.botanico h3::before {
-  content: "🌿 ";
-  font-size: 0.9em;
-  margin-right: 0.3em;
-}
-
-.plan-card.botanico .price {
-  color: #3e6b3e;
-  font-weight: 700;
-}
-
-/* Info de ciclos */
-.cycle-info {
-  background: #e8f5e9;
-  border-radius: 12px;
-  padding: 2rem;
-  margin-top: 3rem;
-  text-align: center;
-}
-.cycle-info h4 {
-  color: var(--verde);
-  margin-bottom: 1rem;
-}
-.cycle-info p {
-  margin: 0.5rem 0;
-  color: #333;
-}
-
-/* TESTIMONIO EMPRESARIAL */
-#testi-empresarial {
-  background: #ffffff;
-  padding: 4rem 0;
-}
-#testi-empresarial h2 {
-  text-align: center;
-  color: var(--verde);
-  margin-bottom: 2rem;
-}
-.testi-emp {
-  background: #f8e8f8;
-  border-left: 5px solid #3e6b3e;
-  border-radius: 12px;
-  padding: 2rem;
-  max-width: 800px;
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--txt);
+  background: var(--rosa);
+  line-height: 1.6;
+  max-width: 1200px;
   margin: 0 auto;
-  font-style: italic;
-}
-.testi-emp p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
-.testi-emp footer {
-  font-weight: 600;
-  font-style: normal;
-  color: #555;
+  padding: 0 clamp(1rem, 5vw, 2rem);
 }
 
-/* ===== FONDO ANIMADO CON FLORES ===== */
+/* ================= FONDO ANIMADO ================= */
 body::before {
   content: "";
   position: fixed;
@@ -287,6 +41,7 @@ body::before {
     radial-gradient(circle at 90% 80%, rgba(62,107,62,0.1) 0%, transparent 50%);
   z-index: -1;
   animation: floatFlowers 20s ease-in-out infinite;
+  pointer-events: none;
 }
 
 @keyframes floatFlowers {
@@ -295,21 +50,63 @@ body::before {
   66% { transform: translate(20px, 10px) rotate(-1deg); }
 }
 
-/* ===== APARICIÓN SUAVE AL SCROLL ===== */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+/* ================= ACCESIBILIDAD ================= */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--verde);
+  color: #fff;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
 }
 
-.plan-card,
-.testi-emp,
-blockquote,
-#planes h2,
-#cta .btn-wa {
-  animation: fadeInUp 0.8s ease-out;
+.skip-link:focus {
+  top: 0;
 }
 
-/* ===== ONDA VERDE EN HEADER ===== */
+/* ================= LAYOUT ================= */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 2rem 0;
+  margin: 2rem 0;
+}
+
+/* ================= HEADER ================= */
+header {
+  text-align: center;
+  background: #fff;
+  border-radius: 0 0 20px 20px;
+  padding: 3rem 1rem;
+  margin: 0 -1rem 2rem -1rem;
+  position: relative;
+}
+
+header img {
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  color: var(--verde);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+/* Onda decorativa en header */
 header::after {
   content: "";
   position: absolute;
@@ -323,11 +120,40 @@ header::after {
   z-index: 1;
 }
 
-/* ===== PULSO EN BOTÓN WHATSAPP ===== */
+/* ================= BOTÓN WHATSAPP ================= */
 .btn-wa {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--whatsapp);
+  color: #fff;
+  padding: 1rem 2rem;
+  min-height: 48px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
   position: relative;
   overflow: hidden;
+  touch-action: manipulation;
+  max-width: 300px;
+  margin: 1rem auto;
 }
+
+.btn-wa:hover,
+.btn-wa:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-wa:active {
+  transform: translateY(0);
+}
+
+/* Efecto pulso */
 .btn-wa::before {
   content: "";
   position: absolute;
@@ -354,7 +180,75 @@ header::after {
   }
 }
 
-/* ===== ONDA AL HOVERS ===== */
+/* ================= TIPOGRAFÍA ================= */
+h2 {
+  margin: 2rem 0 1rem;
+  color: var(--verde);
+  text-align: center;
+}
+
+h3 {
+  color: var(--verde);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+h4 {
+  color: var(--verde);
+  margin-bottom: 1rem;
+}
+
+/* ================= LISTAS ================= */
+ol {
+  margin-left: 1.5rem;
+}
+
+ol li {
+  margin: 0.5rem 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* ================= PLANES ================= */
+#planes {
+  background: #fff;
+  padding: 4rem 0;
+  border-radius: 12px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plan-card {
+  background: #f8e8f8;
+  border-radius: 16px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+  will-change: transform;
+  animation: fadeInUp 0.8s ease-out backwards;
+  animation-delay: calc(var(--index) * 0.1s);
+}
+
+.plan-card:hover {
+  transform: translateY(-8px);
+  will-change: auto;
+}
+
+/* Efecto onda al hover */
 .plan-card::before {
   content: "";
   position: absolute;
@@ -367,45 +261,249 @@ header::after {
   transform: translate(-50%, -50%);
   transition: width 0.6s, height 0.6s;
   z-index: 0;
+  pointer-events: none;
 }
+
 .plan-card:hover::before {
   width: 300px;
   height: 300px;
 }
-/* ===== IMÁGENES RESPONSIVAS ===== */
-picture img, img {
-  max-width: 100%; /* Asegura que no se salgan del contenedor */
-  height: auto; /* Mantén la proporción */
-  object-fit: cover; /* Cubre el espacio sin deformarse */
+
+.plan-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  display: block;
 }
 
-/* ===== GALERÍA ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajusta el tamaño mínimo */
-  gap: 1.5rem;
-  margin: 1rem 0 3rem;
+.plan-card h3 {
+  position: relative;
+  z-index: 1;
 }
 
-article {
+.plan-card .price {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--txt);
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.plan-card ul {
+  margin: 0 0 1.5rem 0;
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.plan-card li {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: var(--txt-light);
+}
+
+.plan-card small {
+  display: block;
+  margin: 1rem 0;
+  color: #666;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+.plan-card .btn-wa {
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 280px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ================= PLAN BOTÁNICO ================= */
+.plan-card.botanico {
+  background: linear-gradient(135deg, #f8e8f8 0%, #e8f5e9 100%);
+  border: 2px solid var(--verde);
+}
+
+/* Borde animado superior */
+.plan-card.botanico::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--whatsapp), transparent);
+  animation: borderSlide 3s linear infinite;
+  z-index: 2;
+}
+
+@keyframes borderSlide {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(100%); }
+}
+
+.plan-card.botanico .price {
+  color: var(--verde);
+  font-weight: 700;
+}
+
+/* ================= CICLOS INFO ================= */
+.cycle-info {
+  background: #e8f5e9;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.cycle-info p {
+  margin: 0.5rem 0;
+  color: var(--txt);
+}
+
+/* ================= TESTIMONIOS ================= */
+blockquote {
+  background: #fff;
+  padding: 1.5rem;
+  border-left: 5px solid var(--verde);
+  border-radius: 8px;
+  font-style: italic;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+blockquote p {
+  margin-bottom: 1rem;
+}
+
+blockquote footer {
+  margin-top: 1rem;
+  font-weight: 600;
+  font-style: normal;
+}
+
+/* ================= TESTIMONIO EMPRESARIAL ================= */
+#testi-empresarial {
+  background: #fff;
+  padding: 4rem 0;
+  border-radius: 12px;
+}
+
+.testi-emp {
+  background: #f8e8f8;
+  border-left: 5px solid var(--verde);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  font-style: italic;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.testi-emp p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.testi-emp footer {
+  font-weight: 600;
+  font-style: normal;
+  color: var(--txt-light);
+}
+
+/* ================= CTA ================= */
+#cta {
+  text-align: center;
   background: #fff;
   border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 2rem;
+  margin: 2rem 0;
 }
 
-article h3 {
-  padding: 1rem;
-  margin: 0;
+#cta .btn-wa {
+  animation: fadeInUp 0.8s ease-out;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================= FOOTER ================= */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+  color: var(--txt-light);
+}
+
+footer a {
+  color: var(--verde);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* ================= ANIMACIONES ================= */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (min-width: 768px) {
+  html {
+    font-size: 18px;
+  }
+
+  .plans-grid {
+    max-width: 900px;
+    margin: 2rem auto;
+  }
+
+  section {
+    padding: 2rem 0;
+  }
+}
+
 @media (max-width: 600px) {
-  .grid {
-    grid-template-columns: 1fr; /* Una columna en móviles */
+  h1 {
+    font-size: 2rem;
   }
 
-  article img {
-    height: 200px; /* Altura fija para móviles */
+  header p {
+    font-size: 1rem;
   }
+
+  .btn-wa {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .plan-card img {
+    height: 200px;
+  }
+}
+
+/* ================= IMÁGENES RESPONSIVAS ================= */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+picture img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
 }
