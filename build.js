@@ -30,15 +30,19 @@ const logo = readFileSync('img/logo.jpg');
 await sharp(logo).resize(192, 192, { fit: 'contain', background: '#f8e8f8' }).png().toFile('docs/assets/img/icons/icon-192.png');
 await sharp(logo).resize(512, 512, { fit: 'contain', background: '#f8e8f8' }).png().toFile('docs/assets/img/icons/icon-512.png');
 
-// 6. HTML (reemplaza rutas)
+// 6. HTML (con todas las rutas)
 const html = readFileSync('index.html', 'utf8')
   .replace('css/style.css', 'assets/css/main.min.css')
   .replace('js/main.js', 'assets/js/main.min.js')
   .replace(/img\/logo\.jpg/g, 'assets/img/logo-800.webp')
   .replace(/img\/ramo1\.jpeg/g, 'assets/img/ramo1-800.webp')
   .replace(/img\/ramo2\.jpeg/g, 'assets/img/ramo2-800.webp')
-  .replace(/img\/ramo3\.jpg/g, 'assets/img/ramo3-800.webp');
+  .replace(/img\/ramo3\.jpg/g, 'assets/img/ramo3-800.webp')
+  .replace('manifest.json', 'assets/manifest.json'); // IMPORTANTE
 const mini = await minHTML(html, { collapseWhitespace: true, removeComments: true });
 writeFileSync('docs/index.html', mini);
 
-console.log('✅ Build completo');
+// 7. Copiar manifest.json
+writeFileSync('docs/assets/manifest.json', readFileSync('manifest.json', 'utf8'));
+
+console.log('✅ Build completo con SEO y PWA');
